@@ -1,0 +1,70 @@
+AI SEO Meta by Gemini (Versión Temática)
+========================================
+
+Este plugin para WordPress permite generar automáticamente títulos, descripciones y palabras clave SEO optimizadas para Rank Math SEO, utilizando la inteligencia artificial de Gemini y prompts personalizables por temática y ubicación local.
+
+Características principales:
+---------------------------
+- Generación masiva de títulos y descripciones SEO para entradas.
+- Generación automática de excerpt (resumen) si no existe.
+- Generación de palabra clave principal y lista de palabras clave sugeridas.
+- Personalización de prompts, ubicación y topic por defecto desde el panel de administración.
+- Campos editables en el editor de entradas para topic, palabra clave principal y palabras clave sugeridas.
+- Compatible y dependiente de Rank Math SEO.
+
+Requisitos:
+-----------
+- WordPress 5.0 o superior.
+- Es obligatorio tener instalado y activo el plugin Rank Math SEO.
+- El plugin utiliza y actualiza los siguientes campos/metadatos de Rank Math SEO en cada entrada/post:
+    - rank_math_title (Título SEO)
+    - rank_math_description (Descripción SEO)
+    - rank_math_focus_keyword (Palabra clave principal)
+    - rank_math_keywords (Palabras clave sugeridas)
+- Además, requiere una API Key de Gemini (obtenible en https://openrouter.ai/).
+
+Licencia:
+---------
+Este plugin se distribuye bajo la Licencia Pública General GNU (GPL v2 o superior).
+
+Puedes usar, modificar y redistribuir este software libremente bajo los términos de la GPL.
+
+Desarrollado por Kassim & AI Systems.
+Para soporte, sugerencias o mejoras, contacta a tu desarrollador o consulta la documentación oficial de WordPress y Rank Math.
+Soporte y contacto:
+-------------------
+Desarrollado por Kassim & AI Systems.
+Correo: KassimCITO@gmail.com
+Celular/WhatsApp: +52 (443) 505.1882
+Para soporte, sugerencias o mejoras, contacta directamente o consulta la documentación oficial de WordPress y Rank Math.
+Optimización avanzada de slugs SEO:
+----------------------------------
+
+El plugin genera automáticamente slugs (URL amigables) optimizados para SEO siguiendo estas reglas:
+
+1. El slug se basa en el título generado por Gemini, normalizado a minúsculas y solo con letras, números y guiones.
+2. Si la palabra clave principal (focus keyword) no está al inicio, se antepone al slug.
+3. Se eliminan stopwords comunes en español (ej: de, la, y, en, para, etc.) para mayor limpieza y relevancia.
+4. El slug se limita a un máximo de 8 palabras.
+5. Se eliminan palabras que sean fechas (años, meses, días, números sueltos).
+6. Si el slug ya existe en otro post, se añade un sufijo incremental para garantizar unicidad.
+
+Ejemplo visual:
+---------------
+Supongamos que el título generado es:
+    "Noticias de la Feria de Apatzingán en julio 2024"
+y la palabra clave principal es:
+    "feria apatzingan"
+
+El slug resultante será:
+    feria-apatzingan-noticias
+
+Si ya existe, se generará:
+    feria-apatzingan-noticias-2
+
+Así se obtiene una URL limpia, relevante y optimizada para SEO local.
+Redirecciones automáticas tras cambio de slug:
+---------------------------------------------
+Cuando el plugin modifica el slug de una entrada, si el módulo de Redirecciones de Rank Math está activo, se crea automáticamente una redirección 301 de la URL anterior a la nueva. Así, los visitantes y los motores de búsqueda no encontrarán errores y el SEO no se ve afectado.
+
+No necesitas hacer nada manualmente: la redirección se gestiona de forma transparente.
